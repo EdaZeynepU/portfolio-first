@@ -1,0 +1,294 @@
+:root {
+  --color1:rgb(171, 230, 210);  
+  --color2:rgb(175, 139, 222);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: rgb(350, 350, 350, 0.98);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  transition: transform 0.3s ease-out;
+}
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
+.navbar-nav {
+  width: 60%;
+  max-width: 600px;
+  min-width: 400px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.icon-photo {
+  border-radius: 50%;
+}
+.navbar-brand {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-brand,
+.nav-item {
+  padding: 10px;
+  border-radius: 15px;
+}
+.navbar-brand:hover,
+.nav-item:hover {
+  animation: colorChange 2s linear infinite;
+}
+
+/* Welcome Section */
+#welcome {
+  padding-top: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  background: linear-gradient(
+    45deg,
+    var(--color1)25%,
+    var(--color2)
+  );  
+  
+}
+
+#welcome-part,#welcome-part2{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  top: 150px;
+  background-color: #f3f3f3c3;
+  box-shadow: 0px 0px 60px 20px #e7e7e7;
+}
+
+#welcome-part {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+#welcome-part:hover {
+  transform: scaleX(1) rotate(5deg);
+  transition: 2s ease all;
+  left: 80px;
+}
+
+#welcome-text {
+  font-size: 2em;
+  width: 180px;
+  margin: 0 10px;
+}
+
+#welcome-part2 {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+#welcome-part2:hover {
+  transform: scaleX(1) rotate(-5deg);
+  transition: 2s ease all;
+  right: 80px;
+}
+
+.susFace {
+  font-size: 5em;
+}
+
+.hand {
+  font-size: 5em;
+  animation-name: wave-animation;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom center;
+}
+
+#welcomeMe {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 10px #f1f1f1c2;
+  border-radius: 50%;
+}
+
+/*  */
+
+#about {
+  height: 900px;
+  padding:50px;
+  background: #f3f3f3;
+  border-radius: 30px;
+  margin-top: -30px;
+}
+
+#about p{
+  text-indent: 10px;
+}
+#about h3{
+  text-indent: 50px;
+}
+
+
+.about-me-emoji-part{
+  display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width:100%;
+    height: 100px;
+}
+.rate{
+  display: inline-flex;
+  width: 400px;
+}
+
+.one-tick,.zero-tick{
+  display: inline-block;
+  border: black 1px solid;
+  width: 100%;
+  height: 20px;
+}
+.one-tick{
+  background-color: var(--color1);
+}
+.zero-tick{
+  background-color: rgb(255, 255, 255);
+}
+
+/* skills part      ----------------------------------------------------*/
+#skills{
+  margin-top: -8rem;
+  padding: 20px;
+  height: 500px;
+  background: linear-gradient(180deg, #f3f3f3 40%,rgb(255, 223, 159));
+
+}
+
+.logo{
+  width: 50px;
+  margin: 0 10px;
+}
+
+.logos-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: fit-content;
+}
+
+
+
+
+
+/* Animations       ----------------------------------------------------*/
+@keyframes colorChange {
+  25% {
+    background-color: var(--color1);
+  }
+  50% {
+    background-color: rgb(255, 223, 159);
+  }
+  75% {
+    background-color: var(--color2);
+  }
+  100% {
+    background-color: var(--color1);
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(20deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  15% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  35% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  45% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes zoom {
+  25% {
+  }
+  50% {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+/* media -------------------------------------------------*/
+
+@media only screen and (min-width: 850px) {
+  #welcome {
+  }
+  #welcome-text {
+    font-size: 2.5em;
+    width: 220px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #welcome {
+    height: 650px;
+  }
+  #welcome-text {
+    font-size: 4em;
+    width: 300px;
+  }
+  #welcome-part:hover {
+    left: 130px;
+  }
+  #welcome-part2:hover {
+    right: 130px;
+  }
+  #welcomeMe {
+    width: 300px;
+    height: 300px;
+  }
+
+  #about{
+    
+  height: 500px;
+  }
+  .about-me-wiritng{
+    height: 450px;
+  }
+  .about-me-emoji-part{
+      justify-content: space-around;
+  }
+}
+
