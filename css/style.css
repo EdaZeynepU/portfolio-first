@@ -230,7 +230,7 @@
 
 #contact{
   height: fit-content;
- background: url(/src/contact.jpg);
+ background: url("/src/contact.jpg");
  background-position: center;
  background-size: cover;
  display: flex;
