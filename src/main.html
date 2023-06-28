@@ -9,7 +9,6 @@
       src="https://kit.fontawesome.com/6e4ddc7ce8.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/app.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <title>Portfolio</title>
   </head>
@@ -21,13 +20,11 @@
           <img
             src="photoYeniCV.jpg"
             alt=""
-            width="35"
-            height="35"
-            class="d-inline-block align-text-top icon-photo"
+            class="d-inline-block align-text-top icon-photo logo"
           />
           First Portfolio
         </a>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav not-for-phones">
           <li class="nav-item">
             <a class="nav-link" href="#welcome">Welcome</a>
           </li>
@@ -35,15 +32,42 @@
             <a class="nav-link" href="#about">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Skills</a>
+            <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav for-phones">
+            <li class="nav-item">
+              <a class="nav-link" href="#welcome">Welcome</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -116,7 +140,7 @@
 
     <section id="skills">
       <div class="row">
-        <div class="col-md-12 col-lg-6">
+        <div class="skills-subsections col-12 col-lg-12 col-xl-6">
           <h3>Programming languages</h3>
           <div class="logos-div shadow-sm p-3 mb-5 bg-body rounded">
             <img src="/src/logos/C.png" alt="" class="logo" />
@@ -127,17 +151,91 @@
             <img src="/src/logos/dart.png" alt="" class="logo" />
           </div>
         </div>
-        <div class="col-md-12 col-lg-6">
+        <div class="skills-subsections col-lg-12 col-xl-6">
           <h3>Technologies</h3>
           <div class="logos-div shadow-sm p-3 mb-5 bg-body rounded">
-            <img src="/src/logos/" alt="" class="logo" />
-            <img src="/src/logos/" alt="" class="logo" />
-            <img src="/src/logos/" alt="" class="logo" />
-            <img src="/src/logos/" alt="" class="logo" />
-            <img src="/src/logos/" alt="" class="logo" />
+            <img src="/src/logos/babel.png" alt="" class="logo" />
+            <img src="/src/logos/bootstrap.png" alt="" class="logo" />
+            <img src="/src/logos/materialui.png" alt="" class="logo" />
+            <img src="/src/logos/mongodb.png" alt="" class="logo" />
+            <img src="/src/logos/postman.png" alt="" class="logo" />
+            <img src="/src/logos/flutter.png" alt="" class="logo" />
+            <img src="/src/logos/react.js.png" alt="" class="logo" />
+            <img src="/src/logos/webpack.png" alt="" class="logo" />
+          </div>
+        </div>
+        <div class="skills-subsections col-12">
+          <h1>Certificates</h1>
+
+          <div class="skills-subsections col-12">
+            <img
+              src="/src/certificates/freecodecampResWebDes.png"
+              alt=""
+              class="certificate"
+            />
+            <img
+              src="/src/certificates/javascript_basic.jpg"
+              alt=""
+              class="certificate"
+            />
+            <img
+              src="/src/certificates/python_basic.jpg"
+              alt=""
+              class="certificate"
+            />
           </div>
         </div>
       </div>
     </section>
-  </body> 
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="card" style="width: 18rem;">
+        <img src="weather.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Weather App</h5>
+          <p class="card-text">Classic Weather website... changes background according to time or weather.</p>
+          <a href="https://edazeynepu.github.io/WeatherApp/main.html" target="_blank" class="btn btn-primary">See project</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="diet.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Calorie Counter</h5>
+          <p class="card-text">you can enter your target calorie take-in from left bottom button and reset it from right bottom. At the beginning of a new day, it automatically refreshes itself.</p>
+          <a href="https://edazeynepu.github.io/daily-calorie-counter/main.html" target="_blank" class="btn btn-primary">See project</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="todoapp.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Todo App</h5>
+          <p class="card-text">Classic todo website... store the data at the local storage; it is easy to distinguish and search todos.</p>
+          <a href="https://edazeynepu.github.io/Todo-List/intro.html" target="_blank" class="btn btn-primary">See project</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="calculatorapp.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Calculator</h5>
+          <p class="card-text">Classic calculator... </p>
+          <a href="https://edazeynepu.github.io/Basic_Calculator/main.html" target="_blank" class="btn btn-primary">See project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <form action="">
+        <h4>Name:</h4>
+        <input type="text" placeholder="Jane Doe" required/>
+        <h4>Email address:</h4>
+        <input type="email" placeholder="example@gmail.com" required/>
+        <h4>your message:</h4>
+        <textarea name="" cols="30" rows="7" placeholder="your message..."></textarea>
+          <button type="submit">Contact</button>
+      </form>
+    </section>
+
+    <script src="../js/app.js"></script>
+  </body>
 </html>
