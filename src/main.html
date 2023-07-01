@@ -3,13 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="main.css" /> -->
     <link rel="stylesheet" href="../css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/6e4ddc7ce8.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
     <title>Portfolio</title>
   </head>
 
@@ -18,7 +15,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
-            src="photoYeniCV.jpg"
+            src="./images/photoYeniCV.jpg"
             alt=""
             class="d-inline-block align-text-top icon-photo logo"
           />
@@ -38,7 +35,7 @@
             <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
         <button
@@ -64,7 +61,7 @@
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -165,9 +162,9 @@
           </div>
         </div>
         <div class="skills-subsections col-12">
-          <h1>Certificates</h1>
+          <h1 class="certificate-heading">Certificates</h1>
 
-          <div class="skills-subsections col-12">
+          <div class="certificates col-12">
             <img
               src="certificates/freecodecampResWebDes.png"
               alt=""
@@ -230,12 +227,46 @@
         <input type="text" placeholder="Jane Doe" required/>
         <h4>Email address:</h4>
         <input type="email" placeholder="example@gmail.com" required/>
-        <h4>your message:</h4>
-        <textarea name="" cols="30" rows="7" placeholder="your message..."></textarea>
+        <h4>Message:</h4>
+        <textarea name="" cols="50" rows="7" placeholder="your message..."></textarea>
           <button type="submit">Contact</button>
       </form>
     </section>
+    
+    
+    <div class="footer">
+      <div class="container footer-container">
+          <div class="footer-logo">
+            <img src="./images/welcome.jpg" class="d-inline-block align-text-top icon-photo logo" alt="">
+            <p>Byeee!</p>
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <ul>
+              <li><a href="https://www.instagram.com/edazeynepuyank/?hl=en" target="_blank"><i class="fab fa-instagram"></i> edazeynepuyank</a></li>
+              <li><a href="https://www.linkedin.com/in/eda-uyan%C4%B1k-12629b1b6/" target="_blank"><i class="fab fa-linkedin-in"></i> Eda Uyanık</a></li>
+              <li><a href="https://github.com/EdaZeynepU" target="_blank"><i class="fab fa-github"></i> Eda Z Uyanık</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 All rights reserved.</p>
+        </div>
+    </div>
 
+
+    <script
+      src="https://kit.fontawesome.com/6e4ddc7ce8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/app.js"></script>
   </body>
 </html>

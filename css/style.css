@@ -203,8 +203,19 @@
   padding-left: 100px;
 }
 
+
+.certificates{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 .certificate{
   width: 360px;
+}
+.certificate-heading{
+  display: flex;
+  justify-content: center;
 }
 
 /* projects -------------------------------------------------------------*/
@@ -226,20 +237,20 @@
   margin: 15px;
   height: fit-content;
 }
+
 /* contact -------------------------------------------------------------*/
 
 #contact{
   height: fit-content;
- background: url("/src/images/contact.jpg");
+ background: url("../src/images/contact.jpg");
  background-position: center;
  background-size: cover;
  display: flex;
  justify-content: center;
-
 }
 
 form{
-  height: 550px;
+  height: 600px;
   width: max-content;
   justify-content: center;
   align-items: center;
@@ -251,6 +262,8 @@ form> h4{
   width: fit-content;
   padding-right: 20px;
   border-radius: 5px;
+  animation: clearText 20s linear infinite;
+  
 }
 
 input,textarea,button{
@@ -262,11 +275,13 @@ input,textarea,button{
 
 input{
   width: 180px;
+  padding: 10px;
 }
 textarea{
-  width: 60%;
+  width: 100%;
   min-width: 350px;
-  max-width: 650px;
+  max-width: 1250px;
+  padding: 15px;
 }
 button{
   width: 80px;
@@ -276,6 +291,23 @@ button{
 }
 
 
+/* footer */
+.footer-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer ul{
+  list-style: none;
+}
+.footer ul a{
+  text-decoration: none;
+  color: black;
+}
+.footer-container p{
+  text-align: center;
+}
 /* media ------------------------------------------------------------*/
 
 
@@ -364,7 +396,7 @@ button{
   height: 500px;
   }
   #skills{
-    height: 1500px;
+    height: 1150px;
   }
 }
 
@@ -461,6 +493,21 @@ button{
   }
   50% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes clearText {
+  0% {
+    background: #e7e7e7a1;
+  }
+  25% {
+    background: #e7e7e7a1;
+  }
+  60%{
+    background: transparent;
+  }
+  100%{
+    background: #e7e7e7a1;
   }
 }
 

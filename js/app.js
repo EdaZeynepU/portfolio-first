@@ -22,5 +22,5 @@ window.addEventListener('scroll',navbarMove);
 
 navItems.forEach(element => {
   
-  element.addEventListener('click',()=>{setTimeout(() => {navbarMove()}, 1000);})
+  element.addEventListener('click',()=>{setTimeout(() => {navbarMove()}, 1500);})
 });
