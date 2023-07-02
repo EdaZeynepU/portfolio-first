@@ -128,7 +128,7 @@
 #about {
   padding:50px;
   background: #f3f3f3;
-  border-radius: 30px;
+  border-radius: 30px 30px 0 0 ;
   margin-top: -30px;
 }
 
@@ -169,17 +169,13 @@
 #skills{
   display: flex;
   justify-content: center ;
-  margin-top: -8rem;
   padding: 20px;
-  /* height: 500px; */
-  height: 800px;
+  height: fit-content !important;
   background: linear-gradient(180deg, #f3f3f3 40%,var(--color3));
 }
 
 #skills > .row{
   justify-content: center;
-  max-width: 1500px;
-  max-height: 200px;
 }
 
 .logo{
@@ -191,18 +187,12 @@
   width: fit-content;
 }
 
-#skills h3{
-  text-indent: 20px;
-}
-
 .skills-subsections{
-  padding: 10px;
+  padding:10px 10px 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.col-lg-12{
-  padding-left: 100px;
-}
-
 
 .certificates{
   display: flex;
@@ -224,13 +214,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: fit-content !important;
-  padding-top: 30px;
+  height: fit-content;
+  padding-top: 70px;
   padding-bottom: 100px;
  background: linear-gradient(180deg,var(--color3),rgb(231, 231, 231));
 }
 #projects>h3{
-  width: 100%;
+  width: 100vw;
+
   text-align: center;
 }
 .card{
@@ -279,7 +270,7 @@ input{
 }
 textarea{
   width: 100%;
-  min-width: 350px;
+  min-width: 250px;
   max-width: 1250px;
   padding: 15px;
 }
@@ -310,6 +301,20 @@ button{
 }
 /* media ------------------------------------------------------------*/
 
+@media only screen and (max-width: 400px){
+  *{
+    font-size: 0.6rem;
+  }
+  .certificate{
+    width: 98vw;
+  }
+  .navbar{
+    width: 100vw;
+  }
+  textarea{
+    width:80vw!important ;
+  }
+}
 
 @media only screen and (max-width: 576px) {
   *{
@@ -323,22 +328,14 @@ button{
     display: none;
   }
   #about{
-    height: 650px;
-    padding: 10px;
+    padding: 15px;
   }
   #about h3{
     text-indent: 2%;
   }
-  #skills {
-    height: 1400px;
-  }
   .skills-subsections{
     padding: 10px;
   } 
-
-  #projects{
-    height: 1500px;
-  }
 }
 
 @media only screen and (min-width: 576px) {
@@ -346,60 +343,28 @@ button{
   .navbar-toggler{
     display: none;
   }
-  #about{
-    height: 750px;
-  }
-  #skills {
-    height: 1450px;
-}
+  
   .skills-subsections{
-    margin-top: 10px;
-    padding-left: 10px;
+    margin-top: 5px;
   }
   .for-phones{
     display: none;
   }
 
-  #projects{
-    height: 1000px;
-  }
 }
 
 @media only screen and (min-width: 800px) {
-  #about{
-    height: 850px;
-  }
-  #skills {
-    padding-top: 80px;
-}
+ 
   .skills-subsections{
     margin-top: 10px;
-    padding-left: 100px;
-  }
-  #about {
-    height: 670px;
+    /* padding-left: 100px; */
   }
   #welcome-text {
     font-size: 2.5em;
     width: 220px;
   }
   
-  #projects{
-    height: 1000px;
-  }
 }
-
-
-@media only screen and (min-width: 1000px) {
-
-  #about{
-  height: 500px;
-  }
-  #skills{
-    height: 1150px;
-  }
-}
-
 @media only screen and (min-width: 1200px) {
   #welcome {
     height: 650px;
@@ -419,29 +384,12 @@ button{
     height: 300px;
   }
 
-  #about{
-  height: 500px;
-  }
-  .about-me-wiritng{
-    height: 450px;
-  }
   .about-me-emoji-part{
       justify-content: space-around;
   }
-  #skills {
-    height: 1010px;
+
 }
 
-#projects{
-  height: 1000px;
-}
-}
-
-@media only screen and (min-width: 1350px) {
-  #skills{
-    height: 800px;
-  }
-}
 
 
 /* Animations       ----------------------------------------------------*/
