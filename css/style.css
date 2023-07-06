@@ -269,8 +269,8 @@ input{
   padding: 10px;
 }
 textarea{
-  width: 100%;
-  min-width: 250px;
+  width:80vw;
+  min-width: 450px;
   max-width: 1250px;
   padding: 15px;
 }
@@ -282,8 +282,13 @@ button{
 }
 
 
-/* footer */
-.footer-container{
+/* footer  ----------------------------------------------------------*/
+
+.footer{
+  padding-top: 30px;
+}
+
+.footer-container,.footer-bottom{
   display: flex;
   justify-content: space-around;
   align-items: center;
