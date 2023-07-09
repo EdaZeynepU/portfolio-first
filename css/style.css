@@ -1,7 +1,13 @@
-:root {
-  --color1:rgb(171, 230, 210);  
+:root{
+  --color1:rgb(171, 230, 210);
   --color2:rgb(175, 139, 222);
   --color3:rgb(255, 223, 159);
+  --white-light:rgb(255, 255, 255);
+  --white:rgb(245, 245, 245);
+  --gray:gray;
+  --kinda-gray:#f3f3f3c3;
+  --black:black;
+  --writing:black;
 }
 
 * {
@@ -12,7 +18,9 @@
 
 /* Navbar */
 .navbar {
-  background: rgb(350, 350, 350, 0.98);
+  
+  color: var(--writing);
+  background:var(--white-light);
   position: fixed;
   top: 0;
   z-index: 100;
@@ -40,14 +48,20 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
 .navbar-brand,
 .nav-item {
   padding: 10px;
   border-radius: 15px;
 }
+
 .navbar-brand:hover,
 .nav-item:hover {
   animation: colorChange 2s linear infinite;
+}
+
+.nav-link{
+  color: var(--writing);
 }
 
 /* Welcome Section -----------------------------------------------------------*/
@@ -62,8 +76,8 @@
     45deg,
     var(--color1)25%,
     var(--color2)
-  );  
-  
+  );
+
 }
 
 #welcome-part,#welcome-part2{
@@ -72,8 +86,9 @@
   flex-direction: column;
   text-align: center;
   top: 150px;
-  background-color: #f3f3f3c3;
-  box-shadow: 0px 0px 60px 20px #e7e7e7;
+  background-color: var(--kinda-gray);
+  box-shadow: 0px 0px 60px 20px var(--kinda-gray);
+  /* box-shadow: 0px 0px 60px 20px #e7e7e7; */
 }
 
 #welcome-part {
@@ -119,7 +134,7 @@
 #welcomeMe {
   width: 200px;
   height: 200px;
-  box-shadow: 0 0 10px #f1f1f1c2;
+  box-shadow: 0 0 10px var(--kinda-gray);
   border-radius: 50%;
 }
 
@@ -127,8 +142,8 @@
 
 #about {
   padding:50px;
-  background: #f3f3f3;
-  border-radius: 30px 30px 0 0 ;
+  background: var(--white);
+  border-radius: 30px 30px 0 0;
   margin-top: -30px;
 }
 
@@ -162,7 +177,8 @@
   background-color: var(--color1);
 }
 .zero-tick{
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white-light);
+  /* background-color: rgb(255, 255, 255); */
 }
 
 /* skills part      ----------------------------------------------------*/
@@ -171,7 +187,7 @@
   justify-content: center ;
   padding: 20px;
   height: fit-content !important;
-  background: linear-gradient(180deg, #f3f3f3 40%,var(--color3));
+  background: linear-gradient(180deg, var(--white) 40%,var(--color3));
 }
 
 #skills > .row{
@@ -217,7 +233,7 @@
   height: fit-content;
   padding-top: 70px;
   padding-bottom: 100px;
- background: linear-gradient(180deg,var(--color3),rgb(231, 231, 231));
+ background: linear-gradient(180deg,var(--color3),var(--white));
 }
 #projects>h3{
   width: 100vw;
@@ -240,7 +256,7 @@
  justify-content: center;
 }
 
-form{
+#contact>div{
   height: 600px;
   width: max-content;
   justify-content: center;
@@ -249,19 +265,21 @@ form{
   text-indent: 30px;
 }
 
-form> h4{
+#contact h4{
   width: fit-content;
   padding-right: 20px;
   border-radius: 5px;
   animation: clearText 20s linear infinite;
-  
+
 }
 
-input,textarea,button{
+input,textarea,#contact button{
   border-radius: 5px;
   border: solid 1px gray;
-  background-color: rgb(238, 238, 238,0.8);
+  /* background-color: rgb(238, 238, 238,0.8); */
+  background: var(--kinda-gray);
   margin-bottom: 20px;
+  color: var(--writing);
 }
 
 input{
@@ -270,17 +288,16 @@ input{
 }
 textarea{
   width:80vw;
-  min-width: 450px;
-  max-width: 1250px;
+  min-width: 250px;
+  max-width: 650px;
   padding: 15px;
 }
-button{
+#contact button{
   width: 80px;
   height: 40px;
   display: block;
   margin-left: 50px;
 }
-
 
 /* footer  ----------------------------------------------------------*/
 
@@ -299,11 +316,23 @@ button{
 }
 .footer ul a{
   text-decoration: none;
-  color: black;
+  color: var(--writing);
 }
 .footer-container p{
   text-align: center;
 }
+
+/* dark mode toogler -------------------------------------------------*/
+#dark-mode-toggle{
+  background: var(--gray);
+  position: sticky;
+  width: 50px;
+  height: 50px;
+  bottom: 50px;
+  right: 50px;
+  left: 100%;
+}
+
 /* media ------------------------------------------------------------*/
 
 @media only screen and (max-width: 400px){
@@ -340,15 +369,15 @@ button{
   }
   .skills-subsections{
     padding: 10px;
-  } 
+  }
 }
 
 @media only screen and (min-width: 576px) {
-  
+
   .navbar-toggler{
     display: none;
   }
-  
+
   .skills-subsections{
     margin-top: 5px;
   }
@@ -359,7 +388,7 @@ button{
 }
 
 @media only screen and (min-width: 800px) {
- 
+
   .skills-subsections{
     margin-top: 10px;
     /* padding-left: 100px; */
@@ -368,7 +397,7 @@ button{
     font-size: 2.5em;
     width: 220px;
   }
-  
+
 }
 @media only screen and (min-width: 1200px) {
   #welcome {
@@ -451,24 +480,15 @@ button{
 
 @keyframes clearText {
   0% {
-    background: #e7e7e7a1;
+    background: var(--kinda-gray);
   }
   25% {
-    background: #e7e7e7a1;
+    background: var(--kinda-gray);
   }
   60%{
     background: transparent;
   }
   100%{
-    background: #e7e7e7a1;
-  }
-}
-
-@keyframes zoom {
-  25% {
-  }
-  50% {
-    height: 100px;
-    width: 100px;
+    background: var(--kinda-gray);
   }
 }

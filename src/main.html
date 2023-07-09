@@ -3,15 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/styleDark.css" />
     <title>Portfolio</title>
     <link rel="icon" type="image/jpg" href="images/welcome.jpg"/>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('vuNBgOAP2rR5AEr8p');
+        })();
+        function SendMail() {
+            var params = {
+                from_name: document.getElementById("fullName").value,
+                email_id: document.getElementById("email_id").value,
+                message: document.getElementById("message").value,
+            };
+
+            emailjs.send("service_zrojt3f", "template_7e92ekr", params)
+                .then((result) => {
+                    alert("Email successfully sent.");
+                })
+                .catch((error) => {
+                    alert("Failed to send email.");
+                    console.log(error);
+                });
+        }
+    </script>
+    <script src="../js/email.js"></script>
+
   </head>
 
-  <body>
-    <nav class="navbar navbar-light">
+  <!-- data-bs-theme="dark" -->
+  <body data-bs-theme="light">
+    <nav class="navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
@@ -73,6 +100,10 @@
         <p id="welcome-text">Hi</p>
         <p class="hand">👋</p>
       </div>
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider"></span>
+      </label>
       <img src="images/welcome.jpg" id="welcomeMe" alt="" />
       <div id="welcome-part2">
         <p id="welcome-text">Nice to see you?</p>
@@ -162,6 +193,7 @@
           </div>
         </div>
         <div class="col-12">
+
           <h3 class="certificate-heading">Certificates</h3>
 
           <div class="certificates col-12">
@@ -172,6 +204,16 @@
                 class="certificate"
               />
             </a>
+
+              <a href="https://www.freecodecamp.org/certification/fcc975f0de6-710e-4a0c-ab73-6f2bb5ad3765/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="certificates/freecodecampJs.jpg"
+                  alt=""
+                  class="certificate"
+                />
+              </a>
+              
+
             <a href="https://learndigital.withgoogle.com/dijitalatolye/validate-certificate-code" target="_blank" rel="noopener noreferrer">
               <img
                 src="certificates/dijitalatolye_certificate.jpg"
@@ -204,6 +246,22 @@
 
     <section id="projects">
       <h3>Projects</h3>
+
+      <div class="card" style="width: 18rem">
+        <img src="images/gereng.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">German-English-learning website</h5>
+          <p class="card-text">
+            A project for bilinguals to learn another language. You can learn by flashcards with pictures and test yourself in quizzes. Made with React.js, Materialui etc.          </p>
+          <a
+            href="https://edazeynepu.github.io/German-English-learning/presentation/GerEng.html"
+            target="_blank"
+            class="btn btn-primary"
+            >See project</a
+          >
+        </div>
+      </div>
+
       <div class="card" style="width: 18rem">
         <img src="images/weather.png" class="card-img-top" alt="..." />
         <div class="card-body">
@@ -214,23 +272,6 @@
           </p>
           <a
             href="https://edazeynepu.github.io/WeatherApp/main.html"
-            target="_blank"
-            class="btn btn-primary"
-            >See project</a
-          >
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <img src="images/diet.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Calorie Counter</h5>
-          <p class="card-text">
-            You can enter your target calorie take-in from left bottom button
-            and reset it from right bottom. At the beginning of a new day, it
-            automatically refreshes itself.
-          </p>
-          <a
-            href="https://edazeynepu.github.io/daily-calorie-counter/main.html"
             target="_blank"
             class="btn btn-primary"
             >See project</a
@@ -253,19 +294,22 @@
           >
         </div>
       </div>
+
+      
       <div class="card" style="width: 18rem">
-        <img src="images/calculatorapp.png" class="card-img-top" alt="..." />
+        <img src="images/weather_flutter.jpg" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">Calculator</h5>
-          <p class="card-text">Classic calculator...</p>
+          <h5 class="card-title">Weather App Flutter</h5>
+          <p class="card-text">A basic Weather app. It changes the background according to the weather.</p>
           <a
-            href="https://edazeynepu.github.io/Basic_Calculator/main.html"
+            href="https://edazeynepu.github.io/weather_app_flutter/presentation/weather.html"
             target="_blank"
             class="btn btn-primary"
             >See project</a
           >
         </div>
       </div>
+      
       <div class="card" style="width: 18rem">
         <img src="images/hangman.png" class="card-img-top" alt="..." />
         <div class="card-body">
@@ -279,23 +323,57 @@
           >
         </div>
       </div>
+      
+      <div class="card" style="width: 18rem">
+        <img src="images/diet.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Calorie Counter</h5>
+          <p class="card-text">
+            You can enter your target calorie take-in from left bottom button
+            and reset it from right bottom. At the beginning of a new day, it
+            automatically refreshes itself.
+          </p>
+          <a
+            href="https://edazeynepu.github.io/daily-calorie-counter/main.html"
+            target="_blank"
+            class="btn btn-primary"
+            >See project</a
+          >
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <img src="images/calculatorapp.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Calculator</h5>
+          <p class="card-text">Classic calculator...</p>
+          <a
+            href="https://edazeynepu.github.io/Basic_Calculator/main.html"
+            target="_blank"
+            class="btn btn-primary"
+            >See project</a
+          >
+        </div>
+      </div>
+      
     </section>
 
     <section id="contact">
-      <form action="">
+      <div>
         <h4>Name:</h4>
-        <input type="text" placeholder="Jane Doe" required />
+        <input id="fullName" type="text" placeholder="Jane Doe" required />
         <h4>Email address:</h4>
-        <input type="email" placeholder="example@gmail.com" required />
+        <input id="email_id" type="email" placeholder="example@gmail.com" required />
         <h4>Message:</h4>
         <textarea
+          id="message"
           name=""
           cols="30"
           rows="7"
           placeholder="your message..."
         ></textarea>
-        <button type="submit">Contact</button>
-      </form>
+        <button onclick="SendMail()">Contact</button>
+      </div>
     </section>
 
     <div class="footer">
@@ -353,5 +431,6 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/dark.js"></script>
   </body>
 </html>
