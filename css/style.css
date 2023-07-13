@@ -8,6 +8,7 @@
   --kinda-gray:#f3f3f3c3;
   --black:black;
   --writing:black;
+  --width-welcomeMe:200px;
 }
 
 * {
@@ -77,7 +78,6 @@
     var(--color1)25%,
     var(--color2)
   );
-
 }
 
 #welcome-part,#welcome-part2{
@@ -88,6 +88,7 @@
   top: 150px;
   background-color: var(--kinda-gray);
   box-shadow: 0px 0px 60px 20px var(--kinda-gray);
+  z-index: 2;
   /* box-shadow: 0px 0px 60px 20px #e7e7e7; */
 }
 
@@ -136,6 +137,41 @@
   height: 200px;
   box-shadow: 0 0 10px var(--kinda-gray);
   border-radius: 50%;
+  animation: antiSpin 20s linear infinite;
+}
+
+.social-meadia{
+  position: relative;
+}
+.social-meadia a{
+  scale: 1.5;
+  position: absolute;
+  color: var(--black-gray);
+}
+.social-meadia .github{
+  left: 45px;
+  top: 215px;
+}
+.social-meadia .linkedin{
+  left: 35px;
+  top: -35px;
+}
+.social-meadia .instagram{
+  top: 90px;
+  right: -45px;
+}
+.social-meadia .fa-github{
+  translate: -50%;
+  rotate:-60deg;
+}
+.social-meadia a .fa-linkedin{
+  translate: -50%;
+  rotate: 60deg;
+}
+
+.social-meadia{
+  animation: spin 20s linear infinite;
+  
 }
 
 /*about me part -----------------------------------------------------------------  */
@@ -180,6 +216,8 @@
   background-color: var(--white-light);
   /* background-color: rgb(255, 255, 255); */
 }
+
+
 
 /* skills part      ----------------------------------------------------*/
 #skills{
@@ -397,7 +435,13 @@ textarea{
     font-size: 2.5em;
     width: 220px;
   }
+  
 
+}
+@media only screen and (max-width: 1200px){
+  #welcome-part {
+    top: 200px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   #welcome {
@@ -417,7 +461,18 @@ textarea{
     width: 300px;
     height: 300px;
   }
-
+  .social-meadia .github{
+    left: 65px;
+    top: 310px;
+  }
+  .social-meadia .linkedin{
+    left: 55px;
+    top: 3/2*-35px;
+  }
+  .social-meadia .instagram{
+    top: 140px;
+    right: -60px;
+  }
   .about-me-emoji-part{
       justify-content: space-around;
   }
@@ -490,5 +545,59 @@ textarea{
   }
   100%{
     background: var(--kinda-gray);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  18%{
+    transform: rotate(180deg);
+  }
+  32%{
+    transform: rotate(180deg);
+  }
+  42%{
+    transform: rotate(300deg);
+  }
+  56%{
+    transform: rotate(300deg);
+  }
+  66%{
+    transform: rotate(420deg);
+  }
+  80%{
+    transform: rotate(420deg);
+  }
+  100%{
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes antiSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  18%{
+    transform: rotate(-180deg);
+  }
+  32%{
+    transform: rotate(-180deg);
+  }
+  42%{
+    transform: rotate(-300deg);
+  }
+  56%{
+    transform: rotate(-300deg);
+  }
+  66%{
+    transform: rotate(-420deg);
+  }
+  80%{
+    transform: rotate(-420deg);
+  }
+  100%{
+    transform: rotate(-720deg);
   }
 }

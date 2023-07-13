@@ -20,7 +20,7 @@
   .switch {
     position: absolute;
     display: inline-block;
-    left: 10px;
+    left: 20px;
     bottom: 20%;
     width: 70px;
     height: 45px;
@@ -64,3 +64,8 @@
     transform: translateX(26px);
   }
 
+  @media only screen and (max-width: 1200px){
+    .switch{
+      top: 110px;
+    }
+  }
