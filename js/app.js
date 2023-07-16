@@ -24,3 +24,9 @@ navItems.forEach(element => {
   
   element.addEventListener('click',()=>{setTimeout(() => {navbarMove()}, 1500);})
 });
+
+$(document).ready(function(){
+  $(".close").click(function(){
+    $("#myAlert").alert("close");
+  });
+});

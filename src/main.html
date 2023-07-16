@@ -32,7 +32,6 @@
                 });
         }
     </script>
-    <script src="../js/email.js"></script>
 
   </head>
 
@@ -185,25 +184,25 @@
         <div class="skills-subsections col-12 col-lg-12 col-xl-6">
           <h3>Programming languages</h3>
           <div class="logos-div shadow-sm p-3 mb-5 bg-body rounded">
-            <img src="images/logos/C.png" alt="" class="logo" />
-            <img src="images/logos/java.png" alt="" class="logo" />
-            <img src="images/logos/javascript.png" alt="" class="logo" />
-            <img src="images/logos/ocaml.png" alt="" class="logo" />
-            <img src="images/logos/python.png" alt="" class="logo" />
-            <img src="images/logos/dart.png" alt="" class="logo" />
+            <img src="images/logos/C.png" alt="C" class="logo" />
+            <img src="images/logos/java.png" alt="java" class="logo" />
+            <img src="images/logos/javascript.png" alt="javascript" class="logo" />
+            <img src="images/logos/ocaml.png" alt="ocaml" class="logo" />
+            <img src="images/logos/python.png" alt="python" class="logo" />
+            <img src="images/logos/dart.png" alt="dart" class="logo" />
           </div>
         </div>
         <div class="skills-subsections col-lg-12 col-xl-6">
           <h3>Technologies</h3>
           <div class="logos-div shadow-sm p-3 mb-5 bg-body rounded">
-            <img src="images/logos/babel.png" alt="" class="logo" />
-            <img src="images/logos/bootstrap.png" alt="" class="logo" />
-            <img src="images/logos/materialui.png" alt="" class="logo" />
-            <img src="images/logos/mongodb.png" alt="" class="logo" />
-            <img src="images/logos/postman.png" alt="" class="logo" />
-            <img src="images/logos/flutter.png" alt="" class="logo" />
-            <img src="images/logos/react.js.png" alt="" class="logo" />
-            <img src="images/logos/webpack.png" alt="" class="logo" />
+            <img src="images/logos/babel.png" alt="babel" class="logo" />
+            <img src="images/logos/bootstrap.png" alt="bootstrap" class="logo" />
+            <img src="images/logos/materialui.png" alt="materialui" class="logo" />
+            <img src="images/logos/mongodb.png" alt="mongodb" class="logo" />
+            <img src="images/logos/postman.png" alt="postman" class="logo" />
+            <img src="images/logos/flutter.png" alt="flutter" class="logo" />
+            <img src="images/logos/react.js.png" alt="react.js" class="logo" />
+            <img src="images/logos/webpack.png" alt="webpack" class="logo" />
           </div>
         </div>
         <div class="col-12">
@@ -373,7 +372,7 @@
     </section>
 
     <section id="contact">
-      <div>
+      <div class="form">
         <h4>Name:</h4>
         <input id="fullName" type="text" placeholder="Jane Doe" required />
         <h4>Email address:</h4>
@@ -387,6 +386,10 @@
           placeholder="your message..."
         ></textarea>
         <button onclick="SendMail()">Contact</button>
+        <!-- <div class="alert alert-danger alert-dismissible" id="myAlert">
+          <a href="#contact" class="close">&times;</a>
+          <strong>Hey you!</strong> Try to close this alert message.
+        </div> -->
       </div>
     </section>
 
@@ -438,6 +441,9 @@
       </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>    
+
+    <script src="../js/email.js"></script>
     <script
       src="https://kit.fontawesome.com/6e4ddc7ce8.js"
       crossorigin="anonymous"
