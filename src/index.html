@@ -1,53 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/styleDark.css" />
-    <title>Portfolio</title>
-    <link rel="icon" type="image/jpg" href="images/welcome.jpg"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('vuNBgOAP2rR5AEr8p');
-        })();
-        function SendMail() {
-            var params = {
-                from_name: document.getElementById("fullName").value,
-                email_id: document.getElementById("email_id").value,
-                message: document.getElementById("message").value,
-            };
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/styleDark.css" />
+  <title>Portfolio</title>
+  <link rel="icon" type="image/jpg" href="images/welcome.jpg" />
 
-            emailjs.send("service_zrojt3f", "template_7e92ekr", params)
-                .then((result) => {
-                    alert("Email successfully sent.");
-                })
-                .catch((error) => {
-                    alert("Failed to send email.");
-                    console.log(error);
-                });
-        }
-    </script>
 
-  </head>
+</head>
 
-  <!-- data-bs-theme="dark" -->
-  <body data-bs-theme="light">
-    <nav class="navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="./images/photoYeniCV.jpg"
-            alt=""
-            class="d-inline-block align-text-top icon-photo logo"
-          />
-          First Portfolio
-        </a>
-        <ul class="navbar-nav not-for-phones">
+<!-- data-bs-theme="dark" -->
+
+<body data-bs-theme="light">
+  <nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./images/photoYeniCV.jpg" alt="" class="d-inline-block align-text-top icon-photo logo" />
+        First Portfolio
+      </a>
+      <ul class="navbar-nav not-for-phones">
+        <li class="nav-item">
+          <a class="nav-link" href="#welcome">Welcome</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mailto:edazeynep99@gmail.com">Contact</a>
+        </li>
+      </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav for-phones">
           <li class="nav-item">
             <a class="nav-link" href="#welcome">Welcome</a>
           </li>
@@ -64,467 +61,419 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav for-phones">
-            <li class="nav-item">
-              <a class="nav-link" href="#welcome">Welcome</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
       </div>
-    </nav>
-    <label class="switch">
-      <input type="checkbox" id="dark-mode-toggle">
-      <span class="slider"></span>
-    </label>
+    </div>
+  </nav>
+  <label class="switch">
+    <input type="checkbox" id="dark-mode-toggle">
+    <span class="slider"></span>
+  </label>
 
 
 
-    <section id="welcome">
-      <div id="welcome-part">
-        <p id="welcome-text">Hi</p>
-        <p class="hand">👋</p>
-      </div>
+  <section id="welcome">
+    <div id="welcome-part">
+      <p id="welcome-text">Hi</p>
+      <p class="hand">👋</p>
+    </div>
 
     <div class="social-meadia">
-      <img src="images/welcome.jpg" id="welcomeMe" alt=""/>
+      <img src="images/welcome.jpg" id="welcomeMe" alt="" />
       <a class="github" href="https://github.com/EdaZeynepU" target="_blank">
         <i class="fa-brands fa-github fa-xl"></i>
       </a>
-      <a  class="linkedin" href="https://www.linkedin.com/in/eda-uyan%C4%B1k-12629b1b6/" target="_blank">
+      <a class="linkedin" href="https://www.linkedin.com/in/eda-uyan%C4%B1k-12629b1b6/" target="_blank">
         <i class="fa-brands fa-linkedin fa-xl"></i>
       </a>
       <a class="instagram" href="https://www.instagram.com/edazeynepuyank/?hl=en" target="_blank">
         <i class="fa-brands fa-instagram fa-xl"></i>
-      </a>  
-  </div>
-      <div id="welcome-part2">
-        <p id="welcome-text">Nice to see you?</p>
-        <p class="susFace">🤨</p>
-      </div>
-    </section>
+      </a>
+    </div>
+    <div id="welcome-part2">
+      <p id="welcome-text">Nice to see you?</p>
+      <p class="susFace">🤨</p>
+    </div>
+  </section>
 
-    <section id="about">
-      <div class="container">
-        <h3>About Me</h3>
-        <div class="row">
-          <div class="col-lg-6 col-sm-12">
-            <div id="about-me-writing">
-              <p>
-                I am a second-year Computer Engineering student at Muğla Sıtkı
-                Koçman University. I find coding interesting and enjoyable.
-              </p>
-              <p>
-                Currently, I am interested in App Development and Web
-                Development. I am new to App Development but I do little
-                projects about front end side of Web Development.
-              </p>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
-                sed corporis fugit officiis necessitatibus blanditiis, veniam
-                adipisci nemo.
-              </p>
-            </div>
+  <section id="about">
+    <div class="container">
+      <h3>About Me</h3>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <div id="about-me-writing">
+            <p>
+              I am a second-year Computer Engineering student at Muğla Sıtkı
+              Koçman University. I find coding interesting and enjoyable.
+            </p>
+            <p>
+              Currently, I am interested in App Development and Web
+              Development. I am new to App Development but I do little
+              projects about front end side of Web Development.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+              sed corporis fugit officiis necessitatibus blanditiis, veniam
+              adipisci nemo.
+            </p>
           </div>
+        </div>
 
-          <div class="col-lg-6">
+        <div class="col-lg-6">
+          <div>
+            <h3>Muğla Sıtkı Koçman University</h3>
+            <div class="about-me-emoji-part">
+              <i class="fa-solid fa-school fa-2xl"></i>
+              <div class="rate">
+                <div class="one-tick"></div>
+                <div class="one-tick"></div>
+                <div class="one-tick"></div>
+                <div class="one-tick"></div>
+                <div class="zero-tick"></div>
+              </div>
+            </div>
+
             <div>
-              <h3>Muğla Sıtkı Koçman University</h3>
+              <h3>Manisa Fine Arts High School</h3>
               <div class="about-me-emoji-part">
-                <i class="fa-solid fa-school fa-2xl"></i>
+                <i class="fa-solid fa-graduation-cap fa-2xl"></i>
                 <div class="rate">
                   <div class="one-tick"></div>
                   <div class="one-tick"></div>
                   <div class="one-tick"></div>
-                  <div class="zero-tick"></div>
-                  <div class="zero-tick"></div>
-                </div>
-              </div>
-
-              <div>
-                <h3>Manisa Fine Arts High School</h3>
-                <div class="about-me-emoji-part">
-                  <i class="fa-solid fa-graduation-cap fa-2xl"></i>
-                  <div class="rate">
-                    <div class="one-tick"></div>
-                    <div class="one-tick"></div>
-                    <div class="one-tick"></div>
-                    <div class="one-tick"></div>
-                  </div>
+                  <div class="one-tick"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="skills">
-      <div class="row">
-        <div class="skills-subsections col-12 col-lg-12 col-xl-6">
-          <h3>Programming languages</h3>
-          <div class="logos-div shadow-sm p-3 mb-5 bg-body rounded">
-            <img src="images/logos/C.png" alt="C" class="logo" />
-            <img src="images/logos/java.png" alt="java" class="logo" />
-            <img src="images/logos/javascript.png" alt="javascript" class="logo" />
-            <img src="images/logos/ocaml.png" alt="ocaml" class="logo" />
-            <img src="images/logos/python.png" alt="python" class="logo" />
-            <img src="images/logos/dart.png" alt="dart" class="logo" />
-          </div>
-        </div>
-        <div class="skills-subsections col-lg-12 col-xl-6">
-          <h3>Technologies</h3>
-          <div class="logos-div shadow-sm p-3 mb-5 bg-body rounded">
-            <img src="images/logos/babel.png" alt="babel" class="logo" />
-            <img src="images/logos/bootstrap.png" alt="bootstrap" class="logo" />
-            <img src="images/logos/materialui.png" alt="materialui" class="logo" />
-            <img src="images/logos/mongodb.png" alt="mongodb" class="logo" />
-            <img src="images/logos/postman.png" alt="postman" class="logo" />
-            <img src="images/logos/flutter.png" alt="flutter" class="logo" />
-            <img src="images/logos/react.js.png" alt="react.js" class="logo" />
-            <img src="images/logos/webpack.png" alt="webpack" class="logo" />
-          </div>
-        </div>
-        <div class="col-12">
-
-          <h3 class="certificate-heading">Certificates</h3>
-
-          <div class="certificates col-12">
-            <a href="https://www.freecodecamp.org/certification/fcc975f0de6-710e-4a0c-ab73-6f2bb5ad3765/responsive-web-design" target="_blank" rel="noopener noreferrer">
-              <img
-                src="certificates/freecodecampResWebDes.png"
-                alt=""
-                class="certificate"
-              />
-            </a>
-
-              <a href="https://www.freecodecamp.org/certification/fcc975f0de6-710e-4a0c-ab73-6f2bb5ad3765/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="certificates/freecodecampJs.jpg"
-                  alt=""
-                  class="certificate"
-                />
-              </a>
-              
-
-            <a href="https://learndigital.withgoogle.com/dijitalatolye/validate-certificate-code" target="_blank" rel="noopener noreferrer">
-              <img
-                src="certificates/dijitalatolye_certificate.jpg"
-                alt=""
-                class="certificate"
-              />
-            </a>
-            <a href="https://www.hackerrank.com/certificates/24f57fe91705" target="_blank" rel="noopener noreferrer">
-              <img
-                src="certificates/javascript_basic.jpg"
-                alt=""
-                class="certificate"
-              />
-            </a>
-            <a
-              href="https://www.hackerrank.com/certificates/9df72231b9f1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="certificates/python_basic.jpg"
-                alt=""
-                class="certificate"
-              />
-            </a>
-            <a
-              href="https://gelecegiyazanlar.turkcell.com.tr/certificate/dWlkMjk3NjU4Y2lkMzUwcWlkOTNlbmQ="
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="certificates/python401.jpg"
-                alt=""
-                class="certificate"
-              />
-            </a>
-          </div>
+  <section id="skills">
+    <div class="row">
+      <div class="skills-subsections col-12 col-lg-12 col-xl-6">
+        <h3>Programming languages</h3>
+        <div class="logos-div shadow-sm p-3 mb-5 bg-body rounded">
+          <img src="images/logos/C.png" alt="C" class="logo" />
+          <img src="images/logos/java.png" alt="java" class="logo" />
+          <img src="images/logos/javascript.png" alt="javascript" class="logo" />
+          <img src="images/logos/ocaml.png" alt="ocaml" class="logo" />
+          <img src="images/logos/python.png" alt="python" class="logo" />
+          <img src="images/logos/dart.png" alt="dart" class="logo" />
         </div>
       </div>
-    </section>
-
-    <section id="projects">
-      <h3>Projects</h3>
-
-      <div class="card" style="width: 18rem">
-        <img src="images/gereng.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">German-English-learning website</h5>
-          <p class="card-text">
-            A project for bilinguals to learn another language. You can learn by flashcards with pictures and test yourself in quizzes. Made with React.js, Materialui etc.          </p>
-          <a
-            href="https://edazeynepu.github.io/German-English-learning/presentation/GerEng.html"
-            target="_blank"
-            class="btn btn-primary"
-            >See project</a
-          >
-          <a
-          href="https://github.com/EdaZeynepU/German-English-learning"
-          target="_blank"
-          class="btn btn-secondary"
-          >See code</a
-        >
+      <div class="skills-subsections col-lg-12 col-xl-6">
+        <h3>Technologies and Libraries</h3>
+        <div class="logos-div shadow-sm p-3 mb-5 bg-body rounded">
+          <img src="images/logos/react.js.png" alt="react.js" class="logo" />
+          <img src="images/logos/mysql.png" alt="mysql" class="logo" />
+          <img src="images/logos/react_redux.png" alt="redux" class="logo" />
+          <img src="images/logos/bootstrap.png" alt="bootstrap" class="logo" />
+          <img src="images/logos/tailwind.png" alt="tailwind" class="logo" />
+          <img src="images/logos/materialui.png" alt="materialui" class="logo" />
+          <img src="images/logos/mongodb.png" alt="mongodb" class="logo" />
+          <img src="images/logos/postman.png" alt="postman" class="logo" />
+          <img src="images/logos/flutter.png" alt="flutter" class="logo" />
+          <img src="images/logos/webpack.png" alt="webpack" class="logo" />
+          <img src="images/logos/babel.png" alt="babel" class="logo" />
         </div>
       </div>
+      <div class="col-12">
 
-      <div class="card" style="width: 18rem">
-        <img src="images/weather.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Weather App</h5>
-          <p class="card-text">
-            Classic Weather website... changes background according to time or
-            weather.
-          </p>
-          <a
-            href="https://edazeynepu.github.io/WeatherApp/main.html"
-            target="_blank"
-            class="btn btn-primary"
-            >See project</a
-          >
-          <a
-          href="https://github.com/EdaZeynepU/WeatherApp"
-          target="_blank"
-          class="btn btn-secondary"
-          >See code</a
-        >
-        </div>
-      </div>
+        <h3 class="certificate-heading">Certificates</h3>
 
-      <div class="card" style="width: 18rem">
-        <img src="images/memory_games.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Calculator</h5>
-          <p class="card-text">Classic calculator...</p>
-          <a
-            href="https://edazeynepu.github.io/memory_games/presentation/"
-            target="_blank"
-            class="btn btn-primary"
-            >See project</a
-          >
-          <a
-          href="https://github.com/EdaZeynepU/memory_games/tree/memory_games"
-          target="_blank"
-          class="btn btn-secondary"
-          >See code</a
-        >
-        </div>
-      </div>
+        <div class="certificates col-12">
+          <a href="https://www.freecodecamp.org/certification/fcc975f0de6-710e-4a0c-ab73-6f2bb5ad3765/responsive-web-design"
+            target="_blank" rel="noopener noreferrer">
+            <img src="certificates/freecodecampResWebDes.png" alt="" class="certificate" />
+          </a>
+          <a href="https://www.udemy.com/certificate/UC-9569b71c-79be-4497-81b2-6a5057a07ca9/" target="_blank"
+            rel="noopener noreferrer">
+            <img src="certificates/udemy-reactjs.jpg" alt="" class="certificate" />
+          </a>
+          <a href="https://globalaihub.com/verify/?ref=product&certificate=eyJ1c2VyLWlkIjoxNzkzMzksImNvdXJzZS1pZCI6MTE0NDY1LCJjZXJ0LWlkIjoiMTE0Njk3In0="
+            target="_blank" rel="noopener noreferrer">
+            <img src="certificates/Introduction-to-Machine-Learning-Global-AI-Hub.jpeg" alt="" class="certificate" />
+          </a>
+          <a href="https://globalaihub.com/verify/?ref=product&certificate=eyJ1c2VyLWlkIjoxNzkzMzksImNvdXJzZS1pZCI6MTEyODY0LCJjZXJ0LWlkIjoiMTEzMjYzIn0="
+            target="_blank" rel="noopener noreferrer">
+            <img src="certificates/Python-for-Machine-Learning-Global-AI-Hub.jpeg" alt="" class="certificate" />
+          </a>
+          <a href="https://globalaihub.com/verify/?certificate=eyJ1c2VyLWlkIjoxNzkzMzksImNvdXJzZS1pZCI6MTEwNTQ4LCJjZXJ0LWlkIjoiMTEwODkxIn0="
+            target="_blank" rel="noopener noreferrer">
+            <img src="certificates/Introduction-to-Python-Global-AI-Hub.jpeg" alt="" class="certificate" />
+          </a>
 
-      <div class="card" style="width: 18rem">
-        <img src="images/todoapp.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Todo App</h5>
-          <p class="card-text">
-            Classic todo website... store the data at the local storage; it is
-            easy to distinguish and search todos.
-          </p>
-          <a
-            href="https://edazeynepu.github.io/Todo-List/intro.html"
-            target="_blank"
-            class="btn btn-primary"
-            >See project</a
-          >
-          <a
-          href="https://github.com/EdaZeynepU/Todo-List"
-          target="_blank"
-          class="btn btn-secondary"
-          >See code</a
-        >
-        </div>
-      </div>
+          <a href="https://www.freecodecamp.org/certification/fcc975f0de6-710e-4a0c-ab73-6f2bb5ad3765/javascript-algorithms-and-data-structures"
+            target="_blank" rel="noopener noreferrer">
+            <img src="certificates/freecodecampJs.jpg" alt="" class="certificate" />
+          </a>
 
-      
-      <div class="card" style="width: 18rem">
-        <img src="images/weather_flutter.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Weather App Flutter</h5>
-          <p class="card-text">A basic Weather app. It changes the background according to the weather.</p>
-          <a
-            href="https://edazeynepu.github.io/weather_app_flutter/presentation/weather.html"
-            target="_blank"
-            class="btn btn-primary"
-            >See project</a
-          >
-          <a
-          href="https://github.com/EdaZeynepU/weather_app_flutter"
-          target="_blank"
-          class="btn btn-secondary"
-          >See code</a
-        >
-        </div>
-      </div>
-      
-      <div class="card" style="width: 18rem">
-        <img src="images/hangman.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Hangman</h5>
-          <p class="card-text">A hangman game with flutter. It has 3 different language options.</p>
-          <a
-            href="https://edazeynepu.github.io/hangman_flutter/presentation/hangman.html"
-            target="_blank"
-            class="btn btn-primary"
-            >See project</a
-          >
-          <a
-          href="https://github.com/EdaZeynepU/hangman_flutter"
-          target="_blank"
-          class="btn btn-secondary"
-          >See code</a
-        >
-        </div>
-      </div>
-      
-      <div class="card" style="width: 18rem">
-        <img src="images/diet.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Calorie Counter</h5>
-          <p class="card-text">
-            You can enter your target calorie take-in from left bottom button
-            and reset it from right bottom. At the beginning of a new day, it
-            automatically refreshes itself.
-          </p>
-          <a
-            href="https://edazeynepu.github.io/daily-calorie-counter/main.html"
-            target="_blank"
-            class="btn btn-primary"
-            >See project</a
-          >
-          <a
-          href="https://github.com/EdaZeynepU/daily-calorie-counter"
-          target="_blank"
-          class="btn btn-secondary"
-          >See code</a
-        >
-        </div>
-      </div>
 
-      <div class="card" style="width: 18rem">
-        <img src="images/calculatorapp.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Calculator</h5>
-          <p class="card-text">Classic calculator...</p>
-          <a
-            href="https://edazeynepu.github.io/Basic_Calculator/main.html"
-            target="_blank"
-            class="btn btn-primary"
-            >See project</a
-          >
-          <a
-          href="https://github.com/EdaZeynepU/Basic_Calculator"
-          target="_blank"
-          class="btn btn-secondary"
-          >See code</a
-        >
+          <a href="https://learndigital.withgoogle.com/dijitalatolye/validate-certificate-code" target="_blank"
+            rel="noopener noreferrer">
+            <img src="certificates/dijitalatolye_certificate.jpg" alt="" class="certificate" />
+          </a>
+          <!-- <a href="https://www.hackerrank.com/certificates/24f57fe91705" target="_blank" rel="noopener noreferrer">
+            <img src="certificates/javascript_basic.jpg" alt="" class="certificate" />
+          </a>
+          <a href="https://www.hackerrank.com/certificates/9df72231b9f1" target="_blank" rel="noopener noreferrer">
+            <img src="certificates/python_basic.jpg" alt="" class="certificate" />
+          </a>
+          <a href="https://gelecegiyazanlar.turkcell.com.tr/certificate/dWlkMjk3NjU4Y2lkMzUwcWlkOTNlbmQ="
+            target="_blank" rel="noopener noreferrer">
+            <img src="certificates/python401.jpg" alt="" class="certificate" />
+          </a> -->
         </div>
       </div>
+    </div>
+  </section>
 
-    </section>
+  <section id="projects">
+    <h3>Projects</h3>
 
-    <section id="contact">
-      <div class="form">
-        <h4>Name:</h4>
-        <input id="fullName" type="text" placeholder="Jane Doe" required />
-        <h4>Email address:</h4>
-        <input id="email_id" type="email" placeholder="example@gmail.com" required />
-        <h4>Message:</h4>
-        <textarea
-          id="message"
-          name=""
-          cols="30"
-          rows="7"
-          placeholder="your message..."
-        ></textarea>
-        <button onclick="SendMail()">Contact</button>
-        <!-- <div class="alert alert-danger alert-dismissible" id="myAlert">
-          <a href="#contact" class="close">&times;</a>
-          <strong>Hey you!</strong> Try to close this alert message.
-        </div> -->
-      </div>
-    </section>
-
-    <div class="footer">
-      <div class="container footer-container">
-        <div class="footer-logo">
-          <img
-            src="./images/welcome.jpg"
-            class="d-inline-block align-text-top icon-photo logo"
-            alt=""
-          />
-          <p>Byeee!</p>
-        </div>
-        <div class="footer-links">
-          <ul>
-            <li><a href="#welcome">Welcome</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-social">
-          <ul>
-            <li>
-              <a
-                href="https://www.instagram.com/edazeynepuyank/?hl=en"
-                target="_blank"
-                ><i class="fab fa-instagram"></i> edazeynepuyank</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/eda-uyan%C4%B1k-12629b1b6/"
-                target="_blank"
-                ><i class="fab fa-linkedin-in"></i> Eda Uyanık</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/EdaZeynepU" target="_blank"
-                ><i class="fab fa-github"></i> Eda Z Uyanık</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2023 All rights reserved.</p>
+    <div class="card" style="width: 18rem">
+      <img src="images/student_m_system.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Student Managment System</h5>
+        <p class="card-text">
+          pure html, css and js <br />
+          student login-> email: alice.j@example.com password: alice@123
+          <br />
+          academic login-> email: x password: x
+        </p>
+        <a href="https://edazeynepu.github.io/web_final/html/login.html" target="_blank" class="btn btn-primary">See
+          project</a>
+        <a href="https://github.com/EdaZeynepU/web_final" target="_blank" class="btn btn-secondary">See code</a>
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>    
+    <div class="card" style="width: 18rem">
+      <img src="images/echo_notes.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Echo Notes</h5>
+        <p class="card-text">
+          Bootstrap 5, and some npm packages. Flashcards in time intervals according to Forgetting curve. You can add
+          and delete notes, very basic logic if you remember the word put it into next jar else previous jar and it will be the best
+          if you repeat the note in given time interval.
+        </p>
+        <a href="https://edazeynepu.github.io/ScreenTime/presentation/ScreenTime.html" target="_blank"
+          class="btn btn-primary">See
+          project</a>
+        <a href="https://github.com/EdaZeynepU/ScreenTime" target="_blank" class="btn btn-secondary">See code</a>
+      </div>
+    </div>
 
-    <script src="../js/email.js"></script>
-    <script
-      src="https://kit.fontawesome.com/6e4ddc7ce8.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/dark.js"></script>
-  </body>
+    <div class="card" style="width: 18rem">
+      <img src="images/handm.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Echo Notes</h5>
+        <p class="card-text">
+          TypeScript, MUI and some npm packages. I try to clone H&M home page as I could for improve my coding skills.
+        </p>
+        <a href="https://edazeynepu.github.io/ScreenTime/presentation/ScreenTime.html" target="_blank"
+          class="btn btn-primary">See
+          project</a>
+        <a href="https://github.com/EdaZeynepU/ScreenTime" target="_blank" class="btn btn-secondary">See code</a>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 18rem">
+      <img src="images/screen_time.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Screen Time</h5>
+        <p class="card-text">
+          API, MUI, and some npm packages. A simple cinema website.
+        </p>
+        <a href="https://edazeynepu.github.io/ScreenTime/presentation/ScreenTime.html" target="_blank"
+          class="btn btn-primary">See
+          project</a>
+        <a href="https://github.com/EdaZeynepU/ScreenTime" target="_blank" class="btn btn-secondary">See code</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="images/gereng.jpg" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">German-English-learning website</h5>
+        <p class="card-text">
+          A project for bilinguals to learn another language. You can learn by flashcards with pictures and test
+          yourself in quizzes. Made with React.js, Materialui etc. </p>
+        <a href="https://edazeynepu.github.io/German-English-learning/presentation/GerEng.html" target="_blank"
+          class="btn btn-primary">See project</a>
+        <a href="https://github.com/EdaZeynepU/German-English-learning" target="_blank" class="btn btn-secondary">See
+          code</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="images/find_the_color.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Find Color Game</h5>
+        <p class="card-text">
+          Html, css and js. A basic game where you try to find the target color by blending 3 main colors red, green and blue.
+        </p>
+        <a href="https://edazeynepu.github.io/find_color_game/" target="_blank" class="btn btn-primary">See
+          project</a>
+        <a href="https://github.com/EdaZeynepU/find_color_game" target="_blank" class="btn btn-secondary">See code</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="images/weather.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Weather App</h5>
+        <p class="card-text">
+          Classic Weather website... changes background according to time or
+          weather.
+        </p>
+        <a href="https://edazeynepu.github.io/WeatherApp/main.html" target="_blank" class="btn btn-primary">See
+          project</a>
+        <a href="https://github.com/EdaZeynepU/WeatherApp" target="_blank" class="btn btn-secondary">See code</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="images/memory_games.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Memory games</h5>
+        <p class="card-text">Memory games mobile app with Flutter</p>
+        <a href="https://edazeynepu.github.io/memory_games/presentation/" target="_blank" class="btn btn-primary">See
+          project</a>
+        <a href="https://github.com/EdaZeynepU/memory_games/tree/memory_games" target="_blank"
+          class="btn btn-secondary">See code</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="images/todoapp.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Todo App</h5>
+        <p class="card-text">
+          Classic todo website... store the data at the local storage; it is
+          easy to distinguish and search todos.
+        </p>
+        <a href="https://edazeynepu.github.io/Todo-List/intro.html" target="_blank" class="btn btn-primary">See
+          project</a>
+        <a href="https://github.com/EdaZeynepU/Todo-List" target="_blank" class="btn btn-secondary">See code</a>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 18rem">
+      <img src="images/weather_flutter.jpg" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Weather App Flutter</h5>
+        <p class="card-text">A basic Weather app. It changes the background according to the weather.</p>
+        <a href="https://edazeynepu.github.io/weather_app_flutter/presentation/weather.html" target="_blank"
+          class="btn btn-primary">See project</a>
+        <a href="https://github.com/EdaZeynepU/weather_app_flutter" target="_blank" class="btn btn-secondary">See
+          code</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="images/hangman.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Hangman</h5>
+        <p class="card-text">A hangman game with flutter. It has 3 different language options.</p>
+        <a href="https://edazeynepu.github.io/hangman_flutter/presentation/hangman.html" target="_blank"
+          class="btn btn-primary">See project</a>
+        <a href="https://github.com/EdaZeynepU/hangman_flutter" target="_blank" class="btn btn-secondary">See code</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="images/bank_system.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Bank System</h5>
+        <p class="card-text">
+          Midterm project for web Development lecture.
+          Pure html and css. A simple design and responsive.
+        </p>
+        <a href="https://edazeynepu.github.io/web-development-lecture/" target="_blank" class="btn btn-primary">See
+          project</a>
+        <a href="https://github.com/EdaZeynepU/web-development-lecture" target="_blank" class="btn btn-secondary">See
+          code</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="images/diet.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Calorie Counter</h5>
+        <p class="card-text">
+          You can enter your target calorie take-in from left bottom button
+          and reset it from right bottom. At the beginning of a new day, it
+          automatically refreshes itself.
+        </p>
+        <a href="https://edazeynepu.github.io/daily-calorie-counter/main.html" target="_blank"
+          class="btn btn-primary">See project</a>
+        <a href="https://github.com/EdaZeynepU/daily-calorie-counter" target="_blank" class="btn btn-secondary">See
+          code</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="images/calculatorapp.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Calculator</h5>
+        <p class="card-text">Classic calculator...</p>
+        <a href="https://edazeynepu.github.io/Basic_Calculator/main.html" target="_blank" class="btn btn-primary">See
+          project</a>
+        <a href="https://github.com/EdaZeynepU/Basic_Calculator" target="_blank" class="btn btn-secondary">See code</a>
+      </div>
+    </div>
+
+  </section>
+
+
+  <div class="footer">
+    <div class="container footer-container">
+      <div class="footer-logo">
+        <img src="./images/welcome.jpg" class="d-inline-block align-text-top icon-photo logo" alt="" />
+        <p>Byeee!</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#welcome">Welcome</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/edazeynepuyank/?hl=en" target="_blank"><i class="fab fa-instagram"></i>
+              edazeynepuyank</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/eda-uyan%C4%B1k-12629b1b6/" target="_blank"><i
+                class="fab fa-linkedin-in"></i> Eda Uyanık</a>
+          </li>
+          <li>
+            <a href="https://github.com/EdaZeynepU" target="_blank"><i class="fab fa-github"></i> Eda Z Uyanık</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 All rights reserved.</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="../js/email.js"></script>
+  <script src="https://kit.fontawesome.com/6e4ddc7ce8.js" crossorigin="anonymous"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/dark.js"></script>
+</body>
+
 </html>

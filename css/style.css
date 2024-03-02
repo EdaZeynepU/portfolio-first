@@ -291,72 +291,7 @@
   height: fit-content;
 }
 
-/* contact -------------------------------------------------------------*/
 
-#contact{
-  height: fit-content;
- background: url("../src/images/contact.jpg");
- background-position: center;
- background-size: cover;
- display: flex;
- flex-direction: column;
- align-items: center;
-}
-
-#contact>.form{
-  height: 600px;
-  width: max-content;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-  text-indent: 30px;
-}
-
-#contact h4{
-  width: fit-content;
-  padding-right: 20px;
-  border-radius: 5px;
-  animation: clearText 20s linear infinite;
-
-}
-
-input,textarea,#contact button{
-  border-radius: 5px;
-  border: solid 1px gray;
-  /* background-color: rgb(238, 238, 238,0.8); */
-  background: var(--kinda-gray);
-  margin-bottom: 20px;
-  color: var(--writing);
-}
-
-input{
-  width: 180px;
-  padding: 10px;
-}
-textarea{
-  width:80vw;
-  min-width: 250px;
-  max-width: 650px;
-  padding: 15px;
-}
-#contact button{
-  width: 80px;
-  height: 40px;
-  display: block;
-  margin-left: 50px;
-}
-.alert{
-  width: 300px;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.alert a{
-  font-size: 30px;
-  color: var(--writing);
-  text-decoration: none;
-}
 
 /* footer  ----------------------------------------------------------*/
 
